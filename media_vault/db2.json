@@ -1,0 +1,17 @@
+{
+  "reviews":
+  [
+    {
+      "movie_name": "Inception",
+      "user": "user1",
+      "review": "Amazing movie with a complex plot!",
+      "rating": 9
+    },
+    {
+      "movie_name": "The Matrix",
+      "user": "user2",
+      "review": "A mind-bending sci-fi classic.",
+      "rating": 8
+    }
+  ]
+}
