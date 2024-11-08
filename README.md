@@ -63,8 +63,8 @@ The application uses the TMDb API to fetch movie information:
 
 API Key: Required for TMDb.  
 Endpoints:  
-'Movie().search()': Used for basic title searches.  
-'Discover().discover_movies()': Used for advanced search with filters.  
+`Movie().search()`: Used for basic title searches.  
+`Discover().discover_movies()`: Used for advanced search with filters.  
 ## Contributing
 Contributions are welcome! Here’s how you can help:  
 
