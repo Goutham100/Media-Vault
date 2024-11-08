@@ -24,6 +24,11 @@
       "id": "f85f",
       "username": "mark",
       "password": "12345"
+    },
+    {
+      "id": "d8c3",
+      "username": "donald trump",
+      "password": "12"
     }
   ],
   "reviews": [
@@ -54,6 +59,13 @@
       "user": "uttam",
       "review": "very nice",
       "rating": "7.5"
+    },
+    {
+      "id": "5475",
+      "movie_name": "breaking bad",
+      "user": "uttam",
+      "review": "goat",
+      "rating": "9.9"
     }
   ]
 }
