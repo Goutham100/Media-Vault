@@ -1,5 +1,5 @@
 # MediaVault
-MediaVault is a Python-based application that allows users to search for movies, TV shows, or anime using TMDb’s API, filter searches by genre, release year, language, and rating, and view user reviews. The application also provides user authentication to enable login and signup functionality.  
+MediaVault is a Python-based application that allows users to search for movies, TV shows, or anime using TMDb’s API, filter searches by genre, release year, language, and rating, and view user reviews with searching and sorting using BinarySearchTrees(BST). The application also provides user authentication to enable login and signup functionality.  
 
 This is the DSA project of III Sem Cyber Physical Systems Engineering Students of MIT,Manipal.  
 ## Table of Contents
@@ -13,13 +13,13 @@ This is the DSA project of III Sem Cyber Physical Systems Engineering Students o
 - User Authentication: Users can log in or sign up using locally stored credentials.  
 - Search Movies/TV Shows/Anime: Search for movies, TV shows, or anime by title.  
 - Filter Movies: Search movies with advanced filters like genre, release year, language, and minimum rating.  
-- View Reviews: View user-submitted reviews for specific movies.  
+- View Reviews: View user-submitted reviews for specific movies via sorting and searching based on Rating with Binary Search Trees.  
 
 ## Installation
 Clone the repository:  
 ```
-git clone https://github.com/yourusername/movie-finder.git
-cd movie-finder
+git clone https://github.com/Goutham100/Media-Vault.git
+cd media_vault
 ```
 Make sure you have Python installed. Then, install the required dependencies:  
 ```
@@ -56,7 +56,7 @@ python main.py
 - Search Options: After logging in, you’ll be presented with the main menu:  
   Search for a Movie/TV Show/Anime: Enter the title of the media item you want to search for.
 - Search with Filters: Use filters like genre ID, release year, language, and minimum rating.
-- View Reviews: Enter the title of the media item to view user reviews.
+- View User Reviews: Enter the searching and sorting condition and view the user review.
 - Quit: Exit the application.
 ## API Details
 The application uses the TMDb API to fetch movie information:  
