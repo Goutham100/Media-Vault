@@ -36,6 +36,8 @@ Install JSON Server to simulate the backend server:
 npm install -g json-server
 json-server --watch db.json --port 3000
 ```
+![image](https://github.com/user-attachments/assets/94e5dfab-ab97-45bb-9f19-0f6a77f689a6)  
+
 Database Setup: Ensure db.json is properly formatted with initial data. Here's a sample structure:  
 ```
 {
@@ -65,6 +67,8 @@ API Key: Required for TMDb.
 Endpoints:  
 `Movie().search()`: Used for basic title searches.  
 `Discover().discover_movies()`: Used for advanced search with filters.  
+![image](https://github.com/user-attachments/assets/727bd2ec-c7b9-49de-82eb-eeb0443e285c)  
+
 ## Contributing
 Contributions are welcome! Here’s how you can help:  
 
