@@ -47,18 +47,19 @@ def signup(username, password):
 # Function to search for a movie or TV show
 def search_media(movie_):
     movie = Movie()
-    try:
-        search_results = movie.search(movie_)
-        if not search_results:
-            print("No Results")
-            return
-        print(f"Title: {search_results[0].title}")
-        print(f"Overview: {search_results[0].overview}")
-        print(f"Release Date: {search_results[0].release_date}")
-        print(f"Rating: {search_results[0].vote_average}")
-        print()
-    except Exception:
+    search_results = movie.search(movie_)
+    if not search_results:
         print("No Results")
+        return
+    high = 10
+    if len(search_results)<10:
+        high = len(search_results)
+    for i in range(0, high):
+        print(f"Title: {search_results[i].title}")
+        print(f"Overview: {search_results[i].overview}")
+        print(f"Release Date: {search_results[i].release_date}")
+        print(f"Rating: {search_results[i].vote_average}")
+        print()
 
 # Function to search with filters
 def search_top_movies(genre_id=None, year=None, language=None, min_rating=None):
