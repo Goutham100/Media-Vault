@@ -47,19 +47,22 @@ def signup(username, password):
 # Function to search for a movie or TV show
 def search_media(movie_):
     movie = Movie()
-    search_results = movie.search(movie_)
-    if not search_results:
+    try:
+        search_results = movie.search(movie_)
+        if not search_results:
+            print("No Results")
+            return
+        high = 10
+        if len(search_results)<10:
+            high = len(search_results)
+        for i in range(0, high):
+            print(f"Title: {search_results[i].title}")
+            print(f"Overview: {search_results[i].overview}")
+            print(f"Release Date: {search_results[i].release_date}")
+            print(f"Rating: {search_results[i].vote_average}")
+            print()
+    except Exception:
         print("No Results")
-        return
-    high = 10
-    if len(search_results)<10:
-        high = len(search_results)
-    for i in range(0, high):
-        print(f"Title: {search_results[i].title}")
-        print(f"Overview: {search_results[i].overview}")
-        print(f"Release Date: {search_results[i].release_date}")
-        print(f"Rating: {search_results[i].vote_average}")
-        print()
 
 # Function to search with filters
 def search_top_movies(genre_id=None, year=None, language=None, min_rating=None):
@@ -116,11 +119,30 @@ def print_reviews(media):
             print(f"No reviews found for {media}.")
     else:
         print("Failed to fetch reviews.")
+def add_review(movie_name, user, review_text, rating):
+    url = "http://localhost:3000/reviews"
+
+    # Define the new review data as a dictionary
+    new_review = {
+        "movie_name": movie_name,
+        "user": user,
+        "review": review_text,
+        "rating": rating
+    }
+
+    # Send a POST request to add the new review
+    response = requests.post(url, json=new_review)
+
+    # Check if the request was successful
+    if response.status_code == 201:
+        print("Review added successfully!")
+    else:
+        print("Failed to add review.")
+
 
 # Main program
 if __name__ == '__main__':
     logged_in_user_id = None
-
     # Login or Signup Prompt
     while not logged_in_user_id:
         print("\n1. Login")
@@ -144,7 +166,8 @@ if __name__ == '__main__':
         print("1. Search for a movie/TV show/anime")
         print("2. Search with filters")
         print("3. View reviews for a movie")
-        print("4. Quit")
+        print("4. Write Reviews")
+        print("5. Quit")
 
         try:
             arg = int(input("Enter your option: "))
@@ -152,9 +175,6 @@ if __name__ == '__main__':
             if arg == 1:
                 media = input("Enter the movie name: ")
                 search_media(media)
-                view_reviews = input("Do you want to see the reviews? (y/n): ")
-                if view_reviews.lower() == "y":
-                    print_reviews(media)
 
             elif arg == 2:
                 genre_id = input("Enter genre ID (or leave blank): ").strip()
@@ -171,9 +191,15 @@ if __name__ == '__main__':
 
             elif arg == 3:
                 media = input("Enter the movie name to view reviews: ")
+                print(f"The reviews for {media}: ")
                 print_reviews(media)
-
             elif arg == 4:
+                media = input("Enter the movie you want to review: ")
+                user = username
+                review_text = input("Enter your review: ")
+                rating = input("Enter your rating: ")
+                add_review(media, user, review_text, rating)
+            elif arg == 5:
                 loop = False
                 print("Goodbye!")
             else:

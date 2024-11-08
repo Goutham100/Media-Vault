@@ -19,22 +19,41 @@
       "id": "88b1",
       "username": "uttam",
       "password": "123"
+    },
+    {
+      "id": "f85f",
+      "username": "mark",
+      "password": "12345"
     }
   ],
   "reviews": [
     {
+      "id": "1",
       "movie_name": "Inception",
-      "user_id": 1,
+      "user": "jeff",
       "review": "Amazing movie with a complex plot!",
-      "rating": 9,
-      "id": "5b6b"
+      "rating": "9"
     },
     {
+      "id": "2",
       "movie_name": "The Matrix",
-      "user_id": 2,
+      "user": "akshay kumar",
       "review": "A mind-bending sci-fi classic.",
-      "rating": 8,
-      "id": "88df"
+      "rating": "8"
+    },
+    {
+      "id": "7d4c",
+      "movie_name": "spiderman",
+      "user": "uttam",
+      "review": "it could be better mid tbh",
+      "rating": "5"
+    },
+    {
+      "id": "3149",
+      "movie_name": "dhoom 3",
+      "user": "uttam",
+      "review": "very nice",
+      "rating": "7.5"
     }
   ]
 }
