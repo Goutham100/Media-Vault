@@ -1,15 +1,26 @@
 {
-  "reviews":
-  [
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password_2"
+    }
+  ],
+  "reviews": [
     {
       "movie_name": "Inception",
-      "user": "user1",
+      "user_id": 1,
       "review": "Amazing movie with a complex plot!",
       "rating": 9
     },
     {
       "movie_name": "The Matrix",
-      "user": "user2",
+      "user_id": 2,
       "review": "A mind-bending sci-fi classic.",
       "rating": 8
     }
