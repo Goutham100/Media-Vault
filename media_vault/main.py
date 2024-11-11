@@ -3,7 +3,7 @@ from tmdbv3api import TMDb, Movie, Discover
 
 # Initialize TMDb API
 tmdb = TMDb()
-tmdb.api_key = '09d0650e48d242f97c52f1e4f6780f98'
+tmdb.api_key = 'your_api_key'
 
 # BST Node for Review
 class ReviewNode:

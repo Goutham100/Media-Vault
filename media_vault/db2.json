@@ -29,6 +29,16 @@
       "id": "d8c3",
       "username": "donald trump",
       "password": "12"
+    },
+    {
+      "id": "2eb3",
+      "username": "goutham",
+      "password": "abcd"
+    },
+    {
+      "id": "f898",
+      "username": "homer",
+      "password": "simpson"
     }
   ],
   "reviews": [
@@ -66,6 +76,13 @@
       "user": "uttam",
       "review": "goat",
       "rating": "9.9"
+    },
+    {
+      "id": "415b",
+      "movie_name": "deadpool and wolverine",
+      "user": "homer",
+      "review": "so ass",
+      "rating": "0"
     }
   ]
 }
